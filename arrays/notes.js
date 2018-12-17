@@ -29,8 +29,8 @@ const findNote = function (notes, noteTitle) {
 
 const findNotes = function (notes, query) {
     return notes.filter(function (note, index) {
-        const isTitleMatch = note.title.toLocaleLowerCase().includes(query.toLowerCase())
-        const isBodyMatch = note.body.toLocaleLowerCase().includes(query.toLowerCase())
+        const isTitleMatch = note.title.toLowerCase().includes(query.toLowerCase())
+        const isBodyMatch = note.body.toLowerCase().includes(query.toLowerCase())
         return isTitleMatch || isBodyMatch
     })
 } 
