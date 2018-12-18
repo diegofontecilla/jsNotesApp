@@ -1,8 +1,54 @@
-const ps = document.querySelectorAll('p')
+const todos = [{
+    text: 'Order cat food',
+    completed: false
+}, {
+    text: 'Clean kitchen',
+    completed: true
+}, {
+    text: 'Buy food',
+    completed: true
+}, {
+    text: 'Do work',
+    completed: false
+}, {
+    text: 'Exercise',
+    completed: true
+}]
 
-ps.forEach(function (p) {
-    if (p.textContent.includes('the')) {
-        p.remove()
-    }
+
+const incompleteTodos = todos.filter(function (todo) {
+    return !todo.completed
 })
+
+const summary = document.createElement('h2')
+summary.textContent = `You have ${incompleteTodos.length} todos left`
+document.querySelector('body').appendChild(summary)
+
+
+todos.forEach(function (todo) {
+    const p = document.createElement('p')
+    p.textContent = todo.text
+    document.querySelector('body').appendChild(p)
+})
+
+
+
+
+
+
+
+
+// todos.forEach (function (todo) {
+//     newParagraph.textContent = todo.text
+// })
+
+// document.querySelector('body').appendChild(newParagraph)
+
+
+
+
+// todos.forEach (function (todo) {
+//     newParagraph.textContent = todo.text
+//     document.querySelector('body').append(newParagraph)
+// })
 
