@@ -9,17 +9,6 @@ const notes = [{
     body: 'Get a new seat'
 }]
 
-// const p = document.querySelector('p')
-// p.remove()
-
-const ps = document.querySelectorAll('p')
-
-ps.forEach(function (p) {
-    p.textContent = '*****'
-    // console.log(p.textContent)
-    // p.remove()
+document.querySelector('button').addEventListener('click', function (e) {
+    e.target.textContent = 'The button was clicked'
 })
-
-const newParagraph = document.createElement('p')
-newParagraph.textContent = 'You gonna get a job very soon'
-document.querySelector('body').appendChild(newParagraph)
