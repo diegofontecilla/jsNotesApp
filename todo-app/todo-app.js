@@ -35,6 +35,9 @@ document.querySelector('#add-todo').addEventListener('click', function (e) {
     console.log('I am adding a new todo')
 })
 
+document.querySelector('#new-todo-text').addEventListener('input', function (e) {
+    console.log(e.target.value)
+})
 
 
 
