@@ -15,7 +15,7 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
 document.querySelector('#new-todo').addEventListener('submit', function (e) {
     e.preventDefault()
     todos.push({
-        text: e.target.elements.text.value, 
+        text: e.target.elements.text.value,
         completed: false
     })
     saveTodos(todos)
@@ -27,4 +27,3 @@ document.querySelector('#hide-completed').addEventListener('change', function (e
     filters.hideCompleted = e.target.checked
     renderTodos(todos, filters)
 })
-
